@@ -50001,7 +50001,7 @@ return s},
 $S:38}
 A.Pz.prototype={}
 A.xi.prototype={
-K(a){return new A.oR(B.Bg,"Flutter Demo",A.a2b(null,A.a7_(B.L,B.B2),!0),null)}}
+K(a){return new A.oR(B.Bg,"Mohammad Karbalaee",A.a2b(null,A.a7_(B.L,B.B2),!0),null)}}
 A.p0.prototype={
 au(){return new A.rI(B.p)}}
 A.rI.prototype={
