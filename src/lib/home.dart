@@ -17,6 +17,14 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.black,
+        actions: [
+          Row(
+            children: [
+              Text("Language: "),
+              
+            ],
+          )
+        ],
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
