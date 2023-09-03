@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
               height: 40,
               decoration: BoxDecoration(
                 image: const DecorationImage(
-                    fit: BoxFit.cover, image: AssetImage("assets/profile.png")),
+                    fit: BoxFit.cover, image: AssetImage("profile.png")),
                 borderRadius: BorderRadius.circular(100),
               ),
             ),
