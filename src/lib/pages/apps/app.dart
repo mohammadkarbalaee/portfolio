@@ -5,6 +5,13 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      width: 30,
+      child: Image.network(
+        "https://raw.githubusercontent.com/"
+        "mohammadkarbalaee/portfolio/master/src/assets/shots/menbar1.png",
+        fit: BoxFit.cover,
+      ),
+    );
   }
 }

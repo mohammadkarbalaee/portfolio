@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:src/cv_download.dart';
 import 'package:src/main.dart';
+import 'package:src/pages/apps/app.dart';
+import 'package:src/pages/apps/apps.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -168,7 +170,7 @@ class _HomeState extends State<Home> {
                     onTap: () {
                       setState(() {
                         pageController.animateToPage(0,
-                            duration: const Duration(seconds: 1),
+                            duration: const Duration(microseconds: 1),
                             curve: Curves.linear);
                         currentPage = 0;
                       });
@@ -186,7 +188,7 @@ class _HomeState extends State<Home> {
                     onTap: () {
                       setState(() {
                         pageController.animateToPage(1,
-                            duration: const Duration(seconds: 1),
+                            duration: const Duration(microseconds: 1),
                             curve: Curves.linear);
                         currentPage = 1;
                       });
@@ -203,7 +205,7 @@ class _HomeState extends State<Home> {
                     onTap: () {
                       setState(() {
                         pageController.animateToPage(2,
-                            duration: const Duration(seconds: 1),
+                            duration: const Duration(microseconds: 1),
                             curve: Curves.linear);
                         currentPage = 2;
                       });
@@ -221,10 +223,11 @@ class _HomeState extends State<Home> {
             child: Container(
               color: Colors.white,
               child: PageView(
+                physics: const NeverScrollableScrollPhysics(),
                 controller: pageController,
                 children: const [
                   Center(
-                    child: Text("flutter"),
+                    child: Apps(),
                   ),
                   Center(
                     child: Text("ios"),
