@@ -5,8 +5,8 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 30,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
       child: Image.network(
         "https://raw.githubusercontent.com/"
         "mohammadkarbalaee/portfolio/master/src/assets/shots/menbar1.png",

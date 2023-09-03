@@ -6,21 +6,37 @@ class Apps extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double paddingHorizontal = MediaQuery.of(context).size.width / 8;
+
     return Padding(
-      padding: const EdgeInsets.only(top: 30, left: 150, right: 150),
-      child: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          crossAxisSpacing: 100,
-          childAspectRatio: 0.5,
-          mainAxisSpacing: 70
-        ),
-        itemCount: 10,
-        shrinkWrap: true,
-        itemBuilder: (context, index) {
-          return const App();
-        },
-      ),
-    );
+        padding: EdgeInsets.only(
+            top: 30, left: paddingHorizontal, right: paddingHorizontal),
+        child: Row(
+          children: <Widget>[
+            Flexible(
+              child: ListView(
+                children: [
+                  App(),
+                  App(),
+                  App(),
+                  App(),
+                  App(),
+                ],
+              ),
+            ),
+            SizedBox(width: 30),
+            Flexible(
+              child: ListView(
+                children: [
+                  App(),
+                  App(),
+                  App(),
+                  App(),
+                  App(),
+                ],
+              ),
+            ),
+          ],
+        ));
   }
 }
