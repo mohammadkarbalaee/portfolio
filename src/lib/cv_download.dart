@@ -5,7 +5,7 @@ class DownloadCV extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedButton(
+    return ElevatedButton(
         onPressed: () {},
         child: const Row(
           children: [

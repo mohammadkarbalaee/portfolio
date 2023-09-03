@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:src/cv_download.dart';
+import 'package:src/main.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(227, 247, 195, 1),
+        backgroundColor: const Color.fromRGBO(44,47,49,1),
         actions: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -25,11 +26,15 @@ class _HomeState extends State<Home> {
             children: [
               Text(
                 AppLocalizations.of(context)!.language,
-                style: const TextStyle(fontSize: 12, color: Colors.black),
+                style: const TextStyle(fontSize: 12),
               ),
               TextButton(
                 onPressed: () {
-                  // Handle language change here
+                  MyApp.of(context)!
+                      .setLocale(const Locale.fromSubtags(languageCode: 'en'));
+                  setState(() {
+                    isEnSelected = true;
+                  });
                 },
                 style: TextButton.styleFrom(
                   minimumSize: Size.zero,
@@ -60,7 +65,11 @@ class _HomeState extends State<Home> {
               ),
               TextButton(
                 onPressed: () {
-                  // Handle language change here
+                  MyApp.of(context)!
+                      .setLocale(const Locale.fromSubtags(languageCode: 'de'));
+                  setState(() {
+                    isEnSelected = false;
+                  });
                 },
                 style: TextButton.styleFrom(
                   minimumSize: Size.zero,
@@ -121,8 +130,8 @@ class _HomeState extends State<Home> {
                   "Mohammad Karbalaee",
                   style: TextStyle(
                     fontSize: 16,
+                    color: Colors.white,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
                   ),
                 ),
                 SizedBox(
@@ -131,8 +140,8 @@ class _HomeState extends State<Home> {
                 Text(
                   "Mobile Application Developer",
                   style: TextStyle(
-                    color: Colors.black54,
                     fontSize: 10,
+                    color: Colors.white70
                   ),
                 )
               ],
@@ -146,7 +155,7 @@ class _HomeState extends State<Home> {
         children: [
           Container(
             width: 200,
-            color: const Color.fromRGBO(227, 247, 195, 1),
+            color: const Color.fromRGBO(44,47,49,1),
             child: const Column(
               children: [
                 ListTile(
@@ -161,9 +170,12 @@ class _HomeState extends State<Home> {
               ],
             ),
           ),
-          const Expanded(
-            child: Center(
-              child: Text("Main Content"),
+          Expanded(
+            child: Container(
+              color: const Color.fromRGBO(31,31,31,1),
+              child: const Center(
+                child: Text("Main Content"),
+              ),
             ),
           ),
         ],
