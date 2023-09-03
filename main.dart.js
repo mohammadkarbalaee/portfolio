@@ -40108,7 +40108,7 @@ case 2:return A.a4(o,r)}})
 return A.a6($async$iX,r)}}
 A.a_J.prototype={}
 A.nJ.prototype={
-gjA(){return"profile.png"},
+gjA(){return"assets/profile.png"},
 T6(a){var s,r={},q=a.a
 if(q==null)q=$.O0()
 r.a=r.b=null
