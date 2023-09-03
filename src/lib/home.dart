@@ -10,33 +10,103 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  bool isEnSelected = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.black,
+        backgroundColor: const Color.fromRGBO(227, 247, 195, 1),
+        leading:
+            OutlinedButton(onPressed: () {}, child: const Text("Download CV")),
         actions: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text("Language: "),
-              
+              const Text(
+                "Language:   ",
+                style: TextStyle(fontSize: 12, color: Colors.black),
+              ),
+              TextButton(
+                onPressed: () {
+                  MyApp.of(context)!
+                      .setLocale(const Locale.fromSubtags(languageCode: 'en'));
+                  setState(() {
+                    isEnSelected = true;
+                  });
+                },
+                style: TextButton.styleFrom(
+                  minimumSize: Size.zero,
+                  padding: EdgeInsets.zero,
+                ),
+                child: Container(
+                  width: 25,
+                  height: 25,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: isEnSelected? Colors.blue : Colors.transparent,
+                      width: 2,
+                    ),
+                    image: const DecorationImage(
+                        fit: BoxFit.cover,
+                        image: NetworkImage("https://raw.githubusercontent.com/"
+                            "mohammadkarbalaee/portfolio/master/src/assets/en.png")),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              TextButton(
+                onPressed: () {
+                  MyApp.of(context)!
+                      .setLocale(const Locale.fromSubtags(languageCode: 'de'));
+                  setState(() {
+                    isEnSelected = false;
+                  });
+                },
+                style: TextButton.styleFrom(
+                  minimumSize: Size.zero,
+                  padding: EdgeInsets.zero,
+                ),
+                child: Container(
+                  width: 25,
+                  height: 25,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: !isEnSelected? Colors.blue : Colors.transparent,
+                      width: 2,
+                    ),
+                    image: const DecorationImage(
+                        fit: BoxFit.cover,
+                        image: NetworkImage("https://raw.githubusercontent.com/"
+                            "mohammadkarbalaee/portfolio/master/src/assets/de.png")),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                width: 20,
+              ),
             ],
           )
         ],
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              width: 40,
-              height: 40,
+              width: 45,
+              height: 45,
               decoration: BoxDecoration(
                 image: const DecorationImage(
                     fit: BoxFit.cover,
                     image: NetworkImage(
-                        "https://raw.githubusercontent.com/mohammadkarbalaee/portfolio/master/src/assets/profile.png")),
+                        "https://raw.githubusercontent.com/mohammadkarbalaee/"
+                        "portfolio/master/src/assets/icon.png")),
                 borderRadius: BorderRadius.circular(100),
               ),
             ),
@@ -49,7 +119,10 @@ class _HomeState extends State<Home> {
               children: [
                 Text(
                   "Mohammad Karbalaee",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
                 ),
                 SizedBox(
                   height: 3,
@@ -57,7 +130,7 @@ class _HomeState extends State<Home> {
                 Text(
                   "Mobile Application Developer",
                   style: TextStyle(
-                    color: Colors.grey,
+                    color: Colors.black54,
                     fontSize: 10,
                   ),
                 )
@@ -71,8 +144,7 @@ class _HomeState extends State<Home> {
           Text(AppLocalizations.of(context)!.helloWorld),
           TextButton(
             child: const Text("Set locale to English"),
-            onPressed: () => MyApp.of(context)!
-                .setLocale(const Locale.fromSubtags(languageCode: 'de')),
+            onPressed: () {},
           ),
         ],
       ),
