@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(44, 47, 49, 1),
+        backgroundColor: Colors.white,
         actions: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -28,7 +28,7 @@ class _HomeState extends State<Home> {
             children: [
               Text(
                 AppLocalizations.of(context)!.language,
-                style: const TextStyle(fontSize: 12),
+                style: const TextStyle(fontSize: 12, color: Colors.black),
               ),
               TextButton(
                 onPressed: () {
@@ -132,7 +132,7 @@ class _HomeState extends State<Home> {
                   "Mohammad Karbalaee",
                   style: TextStyle(
                     fontSize: 16,
-                    color: Colors.white,
+                    color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -141,7 +141,7 @@ class _HomeState extends State<Home> {
                 ),
                 Text(
                   "Mobile Application Developer",
-                  style: TextStyle(fontSize: 10, color: Colors.white70),
+                  style: TextStyle(fontSize: 10, color: Colors.grey),
                 )
               ],
             ),
@@ -175,16 +175,8 @@ class _HomeState extends State<Home> {
                     },
                     style: ListTileStyle.drawer,
                     title: const Text(
-                      "Flutter",
+                      "Mobile Apps",
                       style: TextStyle(color: Colors.white, fontSize: 15),
-                    ),
-                    leading: SizedBox(
-                      height: 30,
-                      child: Image.network(
-                        "https://raw.githubusercontent.com/"
-                        "mohammadkarbalaee/portfolio/master/src/assets/flutter.png",
-                        fit: BoxFit.contain,
-                      ),
                     ),
                   ),
                 ),
@@ -200,16 +192,8 @@ class _HomeState extends State<Home> {
                       });
                     },
                     title: const Text(
-                      "Native iOS",
+                      "Packages",
                       style: TextStyle(color: Colors.white, fontSize: 15),
-                    ),
-                    leading: SizedBox(
-                      height: 30,
-                      child: Image.network(
-                        "https://raw.githubusercontent.com/"
-                        "mohammadkarbalaee/portfolio/master/src/assets/ios.png",
-                        fit: BoxFit.contain,
-                      ),
                     ),
                   ),
                 ),
@@ -225,16 +209,8 @@ class _HomeState extends State<Home> {
                       });
                     },
                     title: const Text(
-                      "Native Android",
+                      "Articles",
                       style: TextStyle(color: Colors.white, fontSize: 15),
-                    ),
-                    leading: SizedBox(
-                      height: 30,
-                      child: Image.network(
-                        "https://raw.githubusercontent.com/"
-                        "mohammadkarbalaee/portfolio/master/src/assets/android.png",
-                        fit: BoxFit.contain,
-                      ),
                     ),
                   ),
                 ),
@@ -243,7 +219,7 @@ class _HomeState extends State<Home> {
           ),
           Expanded(
             child: Container(
-              color: const Color.fromRGBO(31, 31, 31, 1),
+              color: Colors.white,
               child: PageView(
                 controller: pageController,
                 children: const [
