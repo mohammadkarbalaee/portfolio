@@ -26,11 +26,15 @@ class _HomeState extends State<Home> {
               height: 40,
               decoration: BoxDecoration(
                 image: const DecorationImage(
-                    fit: BoxFit.cover, image: AssetImage("profile.png")),
+                    fit: BoxFit.cover,
+                    image: NetworkImage(
+                        "https://raw.githubusercontent.com/mohammadkarbalaee/portfolio/master/src/assets/profile.png")),
                 borderRadius: BorderRadius.circular(100),
               ),
             ),
-            const SizedBox(width: 10,),
+            const SizedBox(
+              width: 10,
+            ),
             const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,7 +43,9 @@ class _HomeState extends State<Home> {
                   "Mohammad Karbalaee",
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 3,),
+                SizedBox(
+                  height: 3,
+                ),
                 Text(
                   "Mobile Application Developer",
                   style: TextStyle(
