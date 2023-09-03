@@ -12,13 +12,15 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   bool isEnSelected = true;
+  int currentPage = 0;
+  PageController pageController = PageController(initialPage: 0);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(44,47,49,1),
+        backgroundColor: const Color.fromRGBO(44, 47, 49, 1),
         actions: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -139,14 +141,13 @@ class _HomeState extends State<Home> {
                 ),
                 Text(
                   "Mobile Application Developer",
-                  style: TextStyle(
-                    fontSize: 10,
-                    color: Colors.white70
-                  ),
+                  style: TextStyle(fontSize: 10, color: Colors.white70),
                 )
               ],
             ),
-            const SizedBox(width: 20,),
+            const SizedBox(
+              width: 20,
+            ),
             const DownloadCV(),
           ],
         ),
@@ -155,26 +156,107 @@ class _HomeState extends State<Home> {
         children: [
           Container(
             width: 200,
-            color: const Color.fromRGBO(44,47,49,1),
-            child: const Column(
+            color: const Color.fromRGBO(44, 47, 49, 1),
+            child: Column(
               children: [
-                ListTile(
-                  title: Text("Item 1"),
+                const SizedBox(
+                  height: 20,
                 ),
-                ListTile(
-                  title: Text("Item 2"),
+                Container(
+                  color: currentPage == 0 ? Colors.blue : Colors.transparent,
+                  child: ListTile(
+                    onTap: () {
+                      setState(() {
+                        pageController.animateToPage(0,
+                            duration: const Duration(seconds: 1),
+                            curve: Curves.linear);
+                        currentPage = 0;
+                      });
+                    },
+                    style: ListTileStyle.drawer,
+                    title: const Text(
+                      "Flutter",
+                      style: TextStyle(color: Colors.white, fontSize: 15),
+                    ),
+                    leading: SizedBox(
+                      height: 30,
+                      child: Image.network(
+                        "https://raw.githubusercontent.com/"
+                        "mohammadkarbalaee/portfolio/master/src/assets/flutter.png",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
                 ),
-                ListTile(
-                  title: Text("Item 3"),
+                Container(
+                  color: currentPage == 1 ? Colors.blue : Colors.transparent,
+                  child: ListTile(
+                    onTap: () {
+                      setState(() {
+                        pageController.animateToPage(1,
+                            duration: const Duration(seconds: 1),
+                            curve: Curves.linear);
+                        currentPage = 1;
+                      });
+                    },
+                    title: const Text(
+                      "Native iOS",
+                      style: TextStyle(color: Colors.white, fontSize: 15),
+                    ),
+                    leading: SizedBox(
+                      height: 30,
+                      child: Image.network(
+                        "https://raw.githubusercontent.com/"
+                        "mohammadkarbalaee/portfolio/master/src/assets/ios.png",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  color: currentPage == 2 ? Colors.blue : Colors.transparent,
+                  child: ListTile(
+                    onTap: () {
+                      setState(() {
+                        pageController.animateToPage(2,
+                            duration: const Duration(seconds: 1),
+                            curve: Curves.linear);
+                        currentPage = 2;
+                      });
+                    },
+                    title: const Text(
+                      "Native Android",
+                      style: TextStyle(color: Colors.white, fontSize: 15),
+                    ),
+                    leading: SizedBox(
+                      height: 30,
+                      child: Image.network(
+                        "https://raw.githubusercontent.com/"
+                        "mohammadkarbalaee/portfolio/master/src/assets/android.png",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
           ),
           Expanded(
             child: Container(
-              color: const Color.fromRGBO(31,31,31,1),
-              child: const Center(
-                child: Text("Main Content"),
+              color: const Color.fromRGBO(31, 31, 31, 1),
+              child: PageView(
+                controller: pageController,
+                children: const [
+                  Center(
+                    child: Text("flutter"),
+                  ),
+                  Center(
+                    child: Text("ios"),
+                  ),
+                  Center(
+                    child: Text("android"),
+                  ),
+                ],
               ),
             ),
           ),
