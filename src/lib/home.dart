@@ -225,7 +225,7 @@ class _HomeState extends State<Home> {
               child: PageView(
                 physics: const NeverScrollableScrollPhysics(),
                 controller: pageController,
-                children: const [
+                children: [
                   Center(
                     child: Apps(),
                   ),
