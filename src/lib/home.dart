@@ -221,7 +221,7 @@ class _HomeState extends State<Home> {
           ),
           Expanded(
             child: Container(
-              color: Colors.white,
+              color: Colors.black12,
               child: PageView(
                 physics: const NeverScrollableScrollPhysics(),
                 controller: pageController,

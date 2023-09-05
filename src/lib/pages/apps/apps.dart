@@ -8,7 +8,7 @@ class Apps extends StatelessWidget {
   Widget build(BuildContext context) {
     double paddingHorizontal = MediaQuery.of(context).size.width / 8;
 
-    return Container(
+    return SizedBox(
       height: MediaQuery.of(context).size.height * 0.93,
       child: SingleChildScrollView(
         child: Padding(
@@ -17,11 +17,14 @@ class Apps extends StatelessWidget {
             left: paddingHorizontal,
             right: paddingHorizontal,
           ),
-          child: Row(
+          child: const Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Flexible(
                 child: Column(
-                  children: const [
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
                     App(),
                     App(),
                     App(),
@@ -30,15 +33,13 @@ class Apps extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(width: 30),
+              SizedBox(width: 80),
               Flexible(
                 child: Column(
-                  children: const [
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
                     App(),
-                    App(),
-                    App(),
-                    App(),
-                    App(),
+
                   ],
                 ),
               ),

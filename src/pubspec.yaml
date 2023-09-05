@@ -34,6 +34,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: any
+  transparent_image: ^2.0.1
 
 dev_dependencies:
   flutter_test:
@@ -70,9 +71,10 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  assets:
+    - assets/mock.png
+
   # To add assets to your application, add an assets section, like this:
-assets:
- - assets/profile.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
