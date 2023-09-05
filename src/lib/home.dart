@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:src/cv_download.dart';
-import 'package:src/main.dart';
-import 'package:src/pages/apps/app.dart';
-import 'package:src/pages/apps/apps.dart';
+import 'package:portfolio/cv_download.dart';
+import 'package:portfolio/main.dart';
+import 'package:portfolio/pages/apps/apps.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
