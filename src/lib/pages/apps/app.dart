@@ -13,7 +13,7 @@ class App extends StatelessWidget {
           placeholder: "mock.png",
           fadeInDuration: const Duration(milliseconds: 300),
           fadeInCurve: Curves.easeIn,
-          fit: BoxFit.cover,
+          fit: BoxFit.contain,
           image: "https://raw.githubusercontent.com/"
               "mohammadkarbalaee/portfolio/master/src/assets/shots/menbar1.png",
         ),

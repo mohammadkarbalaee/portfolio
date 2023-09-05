@@ -1,5 +1,5 @@
 cd src/
-flutter build web --release --web-renderer html
+flutter build web --release
 cd ..
 cp -r src/build/web/ .
 git add .
