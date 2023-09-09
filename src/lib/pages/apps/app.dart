@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
+  final String imageLink;
+  const App({Key? key, required this.imageLink}) : super(key: key);
 
 
   @override
@@ -15,8 +16,7 @@ class App extends StatelessWidget {
           fadeInDuration: const Duration(milliseconds: 300),
           fadeInCurve: Curves.easeIn,
           fit: BoxFit.contain,
-          image: "https://raw.githubusercontent.com/"
-              "mohammadkarbalaee/portfolio/master/src/assets/shots/menbar1.png",
+          image: imageLink,
         ),
       ),
     );

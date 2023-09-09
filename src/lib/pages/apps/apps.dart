@@ -6,7 +6,7 @@ class Apps extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double paddingHorizontal = MediaQuery.of(context).size.width / 8;
+    double paddingHorizontal = MediaQuery.of(context).size.width / 20;
 
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.93,
@@ -25,21 +25,30 @@ class Apps extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    App(),
-                    App(),
-                    App(),
-                    App(),
-                    App(),
+                    App(imageLink: "https://raw.githubusercontent.com/"
+                        "mohammadkarbalaee/portfolio/master/src/assets/shots/menbar1.png",),
+                    App(imageLink: "https://raw.githubusercontent.com/"
+                        "mohammadkarbalaee/portfolio/master/src/assets/shots/menbar2.png",),
                   ],
                 ),
               ),
-              SizedBox(width: 80),
+              SizedBox(width: 50),
               Flexible(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    App(),
-
+                    App(imageLink: "https://raw.githubusercontent.com/"
+                        "mohammadkarbalaee/portfolio/master/src/assets/shots/dragme1.png",),
+                  ],
+                ),
+              ),
+              SizedBox(width: 50),
+              Flexible(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    App(imageLink: "https://raw.githubusercontent.com/"
+                        "mohammadkarbalaee/portfolio/master/src/assets/shots/dragme1.png",),
                   ],
                 ),
               ),
