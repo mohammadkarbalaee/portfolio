@@ -1284,10 +1284,6 @@ input, select, textarea {
 
 		@media screen and (max-width: 980px) {
 
-			#viewer {
-				width: 100%;
-			}
-
 				#viewer .inner .toggle {
 					-moz-transition: opacity 0.75s ease;
 					-webkit-transition: opacity 0.75s ease;
@@ -1324,6 +1320,10 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 480px) {
+
+			#viewer {
+				width: 100%;
+			}
 
 			#viewer {
 				-moz-transition: opacity 0.5s ease;
