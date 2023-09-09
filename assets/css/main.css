@@ -885,7 +885,17 @@ input, select, textarea {
 
 		}
 
+		@media screen and (max-width: 980px) {
 
+			#main {
+				background: rgba(255, 255, 255, 0.925);
+			}
+
+				#main .toggle {
+					display: none;
+				}
+
+		}
 
 		@media screen and (max-width: 480px) {
 
@@ -1272,7 +1282,28 @@ input, select, textarea {
 
 		}
 
-	
+		@media screen and (max-width: 980px) {
+
+			#viewer {
+				width: 100%;
+			}
+
+				#viewer .inner .toggle {
+					-moz-transition: opacity 0.75s ease;
+					-webkit-transition: opacity 0.75s ease;
+					-ms-transition: opacity 0.75s ease;
+					transition: opacity 0.75s ease;
+					background-image: url("images/open.svg");
+					opacity: 0;
+					right: 0;
+				}
+				
+
+				body.fullscreen #viewer .inner .toggle {
+					opacity: 1;
+				}
+
+		}
 
 		@media screen and (max-width: 736px) {
 
