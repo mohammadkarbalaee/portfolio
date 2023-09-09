@@ -64225,9 +64225,9 @@ dQ(a,b){return new A.bn(A.azM(b),t.kL)},
 kk(a){return B.b.u(A.a(["de","en"],t.s),a.gbZ(a))},
 jv(a){return!1}}
 A.zP.prototype={
-gJB(a){return"Sprache:   "}}
+gJB(a){return"Sprache:  "}}
 A.zQ.prototype={
-gJB(a){return"Language:   "}}
+gJB(a){return"Language:  "}}
 A.Er.prototype={$iR:1}
 A.Ow.prototype={
 kk(a){return $.ahe().u(0,a.gbZ(a))},
