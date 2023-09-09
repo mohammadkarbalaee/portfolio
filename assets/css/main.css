@@ -975,8 +975,7 @@ input, select, textarea {
 
 		#thumbnails article {
 			position: relative;
-			width: 50%;
-			background: #101010;
+			width: 25%;
 			outline: 0;
 		}
 
