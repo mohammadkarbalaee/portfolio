@@ -1138,6 +1138,7 @@ input, select, textarea {
 				cursor: pointer;
 				z-index: 1;
 				right: 0;
+				display: none;
 				background-position: calc(100% - 0.75em) 0.75em;
 			}
 
@@ -1308,6 +1309,7 @@ input, select, textarea {
 				#viewer .inner .toggle {
 					background-image: url("images/close-small.svg") !important;
 					background-size: 32px 32px;
+					display: inline;
 				}
 
 				body.fullscreen #viewer {
