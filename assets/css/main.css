@@ -1147,7 +1147,6 @@ input, select, textarea {
 				cursor: pointer;
 				z-index: 1;
 				right: 0;
-				display: none;
 				background-position: calc(100% - 0.75em) 0.75em;
 			}
 
