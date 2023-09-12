@@ -12,6 +12,11 @@
 		<meta name="robots" content="index, follow"> 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	<style>
+		#link1 {
+			background-image: url(images/google_play.png);
+		}
+	</style>
 	<body class="is-preload-0 is-preload-1 is-preload-2">
 		<!-- Main -->
 			<div id="main">
@@ -84,5 +89,34 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				// // Get a reference to the <div> element with the class "caption"
+				// var captionDiv = document.querySelector('.caption');
+
+				// // Create the first <a> tag
+				// var firstLink = document.createElement('a');
+				// firstLink.setAttribute('href', '#'); // Set the href attribute
+				// firstLink.textContent = 'Link 1'; // Set the text content
+				// firstLink.id = 'link1'; // Set the ID for the first <a> tag
+
+				// // Create the second <a> tag
+				// var secondLink = document.createElement('a');
+				// secondLink.setAttribute('href', '#'); // Set the href attribute
+				// secondLink.textContent = 'Link 2'; // Set the text content
+				// secondLink.id = 'link2'; // Set the ID for the second <a> tag
+
+				// // Append the <a> tags to the <div> element
+				// captionDiv.appendChild(firstLink);
+				// captionDiv.appendChild(secondLink);
+
+				var targetElement = document.querySelector('.caption');
+
+				// Create an HTML string that you want to inject
+				var htmlContent = '<a style="text-decoration: none; border-bottom-color: transparent;" href="https://play.google.com/store/apps/details?id=ai.youki.wattify&hl=en_US"><img style="width: 150px;" src="images/google_play.png"/></a>'
+				+ '<a style="text-decoration: none; padding-left: 10px; border-bottom-color: transparent;" href="https://apps.apple.com/de/app/wattify/id1671220817?l=en"><img style="width: 135px;" src="images/app_store.png"/></a>';
+
+				// Set the innerHTML property of the target element to the HTML content
+				targetElement.insertAdjacentHTML('beforeend', htmlContent);
+			</script>
 	</body>
 </html>
